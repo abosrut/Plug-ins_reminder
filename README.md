@@ -68,10 +68,11 @@
 
 **Деплой на GitHub Pages**
 
-1. Запушьте репозиторий в GitHub.
+1. Запушьте репозиторий в GitHub (ветка `main`).
 2. Откройте Settings → Pages.
-3. Выберите ветку `main` и папку `/`.
-4. Сайт будет доступен по URL GitHub Pages.
+3. Вариант A (рекомендуется): Source = GitHub Actions. В репозитории уже есть workflow `/ .github/workflows/pages.yml`. После пуша откройте вкладку Actions и дождитесь зелёного Deploy.
+4. Вариант B: Source = Deploy from a branch, ветка `main`, папка `/`.
+5. Сайт будет доступен по URL GitHub Pages.
 
 **Импорт примера**
 

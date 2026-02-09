@@ -58,6 +58,24 @@ body::before {
     linear-gradient(120deg, rgba(255, 255, 255, 0.04), transparent 60%);
 }
 
+.boot {
+  max-width: 420px;
+  margin: 120px auto 0;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: rgba(18, 20, 26, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.boot-title {
+  font-family: "Fraunces", serif;
+  font-size: 24px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
 body[data-background="ribbons"]::before {
   background-image: radial-gradient(circle at 15% 20%, rgba(211, 107, 45, 0.3), transparent 52%),
     linear-gradient(120deg, rgba(110, 135, 230, 0.18), transparent 60%),
