@@ -1,0 +1,58 @@
+export const seedData = {
+  apps: [
+    { id: "app-ae", name: "After Effects", slug: "after-effects" },
+    { id: "app-pr", name: "Premiere Pro", slug: "premiere-pro" }
+  ],
+  groups: [
+    { id: "grp-ae-color", appId: "app-ae", name: "Color & Finishing" },
+    { id: "grp-ae-utils", appId: "app-ae", name: "Utilities" },
+    { id: "grp-pr-edit", appId: "app-pr", name: "Editing" },
+    { id: "grp-pr-audio", appId: "app-pr", name: "Audio" }
+  ],
+  plugins: [
+    {
+      id: "plg-ae-magic",
+      appId: "app-ae",
+      groupId: "grp-ae-color",
+      name: "Magic Looks",
+      url: "https://example.com/magic-looks",
+      installed: true,
+      description: "# Magic Looks\n\n* Быстрые LUT пресеты\n* Градиентные матчи\n\n**Совет:** храните ссылки на версии и оффлайн-установщики."
+    },
+    {
+      id: "plg-ae-rename",
+      appId: "app-ae",
+      groupId: "grp-ae-utils",
+      name: "Batch Renamer",
+      url: "https://example.com/batch-renamer",
+      installed: false,
+      description: "## Batch Renamer\n\n- Переименование слоев по шаблону\n- Поддержка нумерации\n\n[Документация](https://example.com/docs)"
+    },
+    {
+      id: "plg-pr-cut",
+      appId: "app-pr",
+      groupId: "grp-pr-edit",
+      name: "Smart Cut",
+      url: "https://example.com/smart-cut",
+      installed: true,
+      description: "# Smart Cut\n\nУскоряет монтаж и ускоряет rough cut.\n\n`Shift + S` для быстрых сегментов."
+    },
+    {
+      id: "plg-pr-audio",
+      appId: "app-pr",
+      groupId: "grp-pr-audio",
+      name: "Noise Clear",
+      url: "https://example.com/noise-clear",
+      installed: false,
+      description: "## Noise Clear\n\n- Удаляет шум\n- Быстрая предпрослушка\n\n**Проверьте совместимость** версии перед установкой."
+    }
+  ],
+  settings: {
+    id: "ui",
+    theme: "dark",
+    accent: "#f97316",
+    background: "glow"
+  }
+};
+
+export const defaultSettings = { ...seedData.settings };
