@@ -11,9 +11,9 @@
   --accent-soft: rgba(249, 115, 22, 0.2);
   --border: rgba(255, 255, 255, 0.08);
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-  --radius: 20px;
-  --radius-sm: 12px;
-  --glass-blur: 16px;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --glass-blur: 10px;
   --glass-brightness: 1.08;
 }
 
@@ -39,9 +39,8 @@ body {
   margin: 0;
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at 15% 20%, rgba(249, 115, 22, 0.12), transparent 55%),
-    radial-gradient(circle at 80% 10%, rgba(80, 120, 200, 0.16), transparent 50%),
-    radial-gradient(circle at 20% 85%, rgba(249, 115, 22, 0.1), transparent 55%),
+  background: radial-gradient(circle at 20% 20%, rgba(249, 115, 22, 0.08), transparent 55%),
+    radial-gradient(circle at 85% 15%, rgba(80, 120, 200, 0.1), transparent 55%),
     var(--bg);
   min-height: 100vh;
 }
@@ -91,7 +90,7 @@ body[data-background="blueprint"]::before {
 }
 
 .shell {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 32px auto 80px;
   padding: 0 24px;
   animation: fadeIn 0.6s ease-out;
@@ -100,10 +99,10 @@ body[data-background="blueprint"]::before {
 .topbar {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 26px;
+  padding: 18px 22px;
   background: var(--bg-elev);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -132,7 +131,7 @@ body[data-background="blueprint"]::before {
 .nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
 }
 
 .nav button {
@@ -162,20 +161,20 @@ body[data-background="blueprint"]::before {
 
 .layout {
   display: grid;
-  grid-template-columns: 24% 1fr;
-  gap: 24px;
+  grid-template-columns: 22% 1fr;
+  gap: 12px;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .sidebar-card {
   padding: 16px;
   border-radius: var(--radius);
-  background: rgba(14, 16, 20, 0.86);
+  background: rgba(12, 14, 18, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(var(--glass-blur));
@@ -205,7 +204,7 @@ body[data-background="blueprint"]::before {
 .app-tab {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
   padding: 10px 12px;
   border-radius: 12px;
@@ -258,8 +257,8 @@ body[data-background="blueprint"]::before {
 
 .main-columns {
   display: grid;
-  grid-template-columns: 34% 1fr;
-  gap: 24px;
+  grid-template-columns: 36% 1fr;
+  gap: 12px;
 }
 
 .center-col {
@@ -275,19 +274,19 @@ body[data-background="blueprint"]::before {
 }
 
 .list-card {
-  padding-bottom: 12px;
+  padding-bottom: 10px;
 }
 
 .head-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .columns {
   display: grid;
   grid-template-columns: 1fr 1.6fr;
-  gap: 24px;
+  gap: 12px;
 }
 
 .panel {
@@ -299,7 +298,7 @@ body[data-background="blueprint"]::before {
 .card {
   background: var(--bg-elev);
   border-radius: var(--radius);
-  padding: 20px;
+  padding: 16px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   backdrop-filter: blur(var(--glass-blur)) brightness(var(--glass-brightness));
@@ -314,8 +313,8 @@ body[data-background="blueprint"]::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
-  gap: 12px;
+  margin-bottom: 12px;
+  gap: 10px;
 }
 
 .card-head select {
@@ -329,7 +328,7 @@ body[data-background="blueprint"]::before {
 .list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -340,8 +339,8 @@ body[data-background="blueprint"]::before {
   text-align: left;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 12px 14px;
-  background: rgba(18, 20, 26, 0.8);
+  padding: 10px 12px;
+  background: rgba(16, 18, 24, 0.9);
   color: var(--text);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -400,7 +399,7 @@ body[data-background="blueprint"]::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   padding: 10px 12px;
   border-radius: var(--radius-sm);
   background: transparent;
@@ -582,7 +581,7 @@ body[data-background="blueprint"]::before {
 .editor {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 12px;
 }
 
 .editor textarea {
@@ -599,8 +598,8 @@ body[data-background="blueprint"]::before {
 
 .form-grid {
   display: grid;
-  gap: 12px;
-  margin-bottom: 16px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 .form-grid label {
@@ -621,7 +620,7 @@ body[data-background="blueprint"]::before {
 
 .form-actions {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
 .settings-grid {
@@ -679,4 +678,13 @@ body[data-background="blueprint"]::before {
   .editor {
     grid-template-columns: 1fr;
   }
+}
+
+.settings-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
 }

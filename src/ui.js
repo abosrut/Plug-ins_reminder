@@ -436,7 +436,6 @@ export const initUI = async (store) => {
           <h1>Plug-ins Reminder</h1>
           <span>Adobe After Effects / Premiere Pro</span>
         </div>
-        <nav class=\"nav\">${renderNav()}</nav>
       </header>
       ${state.view === "settings" ? renderSettingsView() : renderAppView()}
     </div>`;
@@ -462,6 +461,12 @@ export const initUI = async (store) => {
     const action = target.dataset.action;
     if (action !== "toggle-menu") {
       state.detailMenuOpen = false;
+    }
+
+    if (action === "back-to-app") {
+      setView("app", state.currentAppId);
+      render();
+      return;
     }
 
     if (action === "nav-app") {
